@@ -15,7 +15,82 @@
             <div class="slogan">أفضل المواد الغذائية بجودة عالية وأسعار منافسة</div>
         </div>
     </header>
-
+<!-- قسم المحافظ الإلكترونية - صورة ورقم فقط -->
+<section class="digital-wallets-compact">
+    <div class="container">
+        <div class="wallets-title">
+            <i class="fas fa-wallet"></i>
+            <span>محافظ الدفع الإلكتروني</span>
+        </div>
+        <div class="wallets-grid-compact">
+            <!-- محفظة جيب Jib -->
+            <div class="wallet-card" onclick="copyWalletNumber('jibNumber', 'جيب')">
+                <div class="wallet-logo">
+                    <img src="images/jaib.png" alt="Jib">
+                </div>
+                <div class="wallet-number" id="jibNumber">525 359</div>
+            </div>
+            
+            <!-- محفظة جوالي Jawaly -->
+            <div class="wallet-card" onclick="copyWalletNumber('jawalyNumber', 'جوالي')">
+                <div class="wallet-logo">
+                    <img src="images/jawali.png" alt="Jawaly">
+                </div>
+                <div class="wallet-number" id="jawalyNumber">129 030</div>
+            </div>
+            <!-- محفظة فلوسك floosqk  -->
+            <div class="wallet-card" onclick="copyWalletNumber('floosqkNumber', 'فلوسك')">
+                <div class="wallet-logo">
+                    <img src="images/floosqk.jfif" alt="floosqk">
+                </div>
+                <div class="wallet-number" id="floosqkNumber">842 622</div>
+            </div>
+            <!-- محفظة كريمي Jawaly -->
+            <div class="wallet-card" onclick="copyWalletNumber('hassebNumber', 'كريمي')">
+                <div class="wallet-logo">
+                    <img src="images/hasseb.png" alt="hasseb">
+                </div>
+                <div class="wallet-number" id="hassebNumber">1456 408</div>
+            </div>
+            <!-- محفظة سبا كاش Jawaly -->
+            <div class="wallet-card" onclick="copyWalletNumber('sabacashNumber', 'سبا كاش')">
+                <div class="wallet-logo">
+                    <img src="images/sabacash.png" alt="sabacash">
+                </div>
+                <div class="wallet-number" id="sabacashNumber">603 409</div>
+            </div>
+            
+            <!-- محفظة موبايل موني Mobile Money -->
+            <div class="wallet-card" onclick="copyWalletNumber('mobileNumber', 'موبايل موني')">
+                <div class="wallet-logo">
+                    <img src="images/mobile_money.png" alt="Mobile Money">
+                </div>
+                <div class="wallet-number" id="mobileNumber">943 328</div>
+            </div>
+                        <!-- محفظة ايزي Mobile Money -->
+            <div class="wallet-card" onclick="copyWalletNumber('easyeNumber', 'ايزي')">
+                <div class="wallet-logo">
+                    <img src="images/easy.png" alt="easy">
+                </div>
+                <div class="wallet-number" id="easyeNumber">5000 606</div>
+            </div>
+                        <!-- محفظة يمن والت Mobile Money -->
+            <div class="wallet-card" onclick="copyWalletNumber('yemen_walletNumber', 'يمن والت')">
+                <div class="wallet-logo">
+                    <img src="images/yemen_wallet.png" alt="yemen_wallet">
+                </div>
+                <div class="wallet-number" id="yemen_walletNumber">777 279 137</div>
+            </div>
+                                    <!-- محفظة ون كاش Mobile Money -->
+            <div class="wallet-card" onclick="copyWalletNumber('one_cashNumber', 'ون كاش')">
+                <div class="wallet-logo">
+                    <img src="images/one_cash.png" alt="one_cash">
+                </div>
+                <div class="wallet-number" id="one_cashNumber">195 915</div>
+            </div>
+        </div>
+    </div>
+</section>
     <section class="baskets-section">
         <div class="container">
             <h2 class="section-title">اختر سلة غذائك المثالية</h2>
@@ -145,5 +220,96 @@
 </script>
              <script type="module" src="js/main.js"></script>
 <!-- kihdm -->
+ <script>
+    // دالة نسخ رقم المحفظة
+function copyWalletNumber(elementId, walletName) {
+    // الحصول على الرقم من العنصر
+    const numberElement = document.getElementById(elementId);
+    const number = numberElement.innerText;
+    
+    // نسخ إلى الحافظة
+    navigator.clipboard.writeText(number).then(() => {
+        // تأثير وميض على البطاقة
+        const card = numberElement.closest('.wallet-card');
+        card.style.backgroundColor = '#d4edda';
+        card.style.transition = '0.2s';
+        setTimeout(() => {
+            card.style.backgroundColor = '';
+        }, 200);
+        
+        // إظهار إشعار
+        showNotification(`✅ تم نسخ رقم ${walletName}: ${number}`, 'success');
+    }).catch(() => {
+        showNotification(`❌ فشل النسخ، حاول مرة أخرى`, 'error');
+    });
+}
+
+// إظهار إشعار منبثق
+function showNotification(message, type = 'success') {
+    // إزالة أي إشعار موجود
+    const oldNotification = document.querySelector('.copy-notification');
+    if (oldNotification) oldNotification.remove();
+    
+    const notification = document.createElement('div');
+    notification.className = 'copy-notification';
+    notification.innerHTML = `
+        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+        <span>${message}</span>
+    `;
+    notification.style.cssText = `
+        position: fixed;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: ${type === 'success' ? '#2b7a3e' : '#e63946'};
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        z-index: 10000;
+        animation: fadeInUp 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Cairo', sans-serif;
+        white-space: nowrap;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.animation = 'fadeOutDown 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    }, 2000);
+}
+
+// إضافة أنماط الحركة للإشعار
+const notifStyle = document.createElement('style');
+notifStyle.textContent = `
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+    
+    @keyframes fadeOutDown {
+        from {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateX(-50%) translateY(20px);
+        }
+    }
+`;
+document.head.appendChild(notifStyle);
+ </script>
 </body>
 </html>
