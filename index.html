@@ -166,7 +166,7 @@
             let clickTimer;
             
             // كلمة المرور (يمكنك تغييرها)
-            const ADMIN_PASSWORD = "242S2000";
+            const ADMIN_PASSWORD = "242S";
             
             function checkAdminAccess() {
                 footerClickCount++;
@@ -203,15 +203,13 @@
                     footer.style.cursor = 'pointer';
                     footer.addEventListener('click', checkAdminAccess);
                     
-                    // إضافة تلميح صغير (اختياري)
-                    footer.title = 'انقر 5 مرات للدخول إلى لوحة الإدارة';
+                    //  footer.title = 'انقر 5 مرات للدخول إلى لوحة الإدارة';
                 }
             });
         </script>
         <script>
     function sendEmail() {
-        // استبدل your-email@example.com بإيميلك الحقيقي
-        const email = "esmaelasid@gmail.com";
+         const email = "esmaelasid@gmail.com";
         const subject = "اتصال من موقع تمونيات سامي";
         const body = "مرحباً EsmaelAseed،%0A%0Aأود التواصل معك بخصوص الموقع.%0A%0Aالرجاء الرد علي في أقرب وقت.%0A%0Aشكراً لك.";
         
@@ -221,13 +219,17 @@
              <script type="module" src="js/main.js"></script>
 <!-- kihdm -->
  <script>
-    // دالة نسخ رقم المحفظة
+
+   // دالة نسخ رقم المحفظة
 function copyWalletNumber(elementId, walletName) {
     // الحصول على الرقم من العنصر
     const numberElement = document.getElementById(elementId);
-    const number = numberElement.innerText;
+    let number = numberElement.innerText;
     
-    // نسخ إلى الحافظة
+    // إزالة جميع المسافات والفواصل والشرطات
+    number = number.replace(/[\s,\-]/g, '');
+    
+    // نسخ الرقم النظيف إلى الحافظة
     navigator.clipboard.writeText(number).then(() => {
         // تأثير وميض على البطاقة
         const card = numberElement.closest('.wallet-card');
@@ -237,13 +239,12 @@ function copyWalletNumber(elementId, walletName) {
             card.style.backgroundColor = '';
         }, 200);
         
-        // إظهار إشعار
-        showNotification(`✅ تم نسخ رقم ${walletName}: ${number}`, 'success');
+        // إظهار إشعار مع الرقم المنظف
+        showNotification(`تم نسخ رقم ${walletName}: ${number}`, 'success');
     }).catch(() => {
         showNotification(`❌ فشل النسخ، حاول مرة أخرى`, 'error');
     });
 }
-
 // إظهار إشعار منبثق
 function showNotification(message, type = 'success') {
     // إزالة أي إشعار موجود
@@ -258,7 +259,7 @@ function showNotification(message, type = 'success') {
     `;
     notification.style.cssText = `
         position: fixed;
-        bottom: 80px;
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
         background: ${type === 'success' ? '#2b7a3e' : '#e63946'};
@@ -267,7 +268,6 @@ function showNotification(message, type = 'success') {
         border-radius: 30px;
         font-size: 0.85rem;
         z-index: 10000;
-        animation: fadeInUp 0.3s ease;
         box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         display: flex;
         align-items: center;
@@ -283,33 +283,6 @@ function showNotification(message, type = 'success') {
         setTimeout(() => notification.remove(), 300);
     }, 2000);
 }
-
-// إضافة أنماط الحركة للإشعار
-const notifStyle = document.createElement('style');
-notifStyle.textContent = `
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateX(-50%) translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-    }
-    
-    @keyframes fadeOutDown {
-        from {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateX(-50%) translateY(20px);
-        }
-    }
-`;
-document.head.appendChild(notifStyle);
  </script>
 </body>
 </html>
