@@ -6,6 +6,8 @@
     <title>تمونيات سامي - المواد الغذائية</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- إضافة Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -91,6 +93,135 @@
         </div>
     </div>
 </section>
+
+<!-- ======= قسم جديد منتجاتنا ======= -->
+<section class="new-products-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="products-title">
+                <i class="fas fa-star"></i>
+                جديد منتجاتنا
+                <i class="fas fa-star"></i>
+            </h2>
+            <p class="products-subtitle">أحدث المنتجات الغذائية بجودة عالية</p>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper products-swiper">
+            <div class="swiper-wrapper">
+                <!-- المنتج 1 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- <i class="fas fa-utensils"></i> -->
+                        </div>
+                        <div class="product-details">
+                            <h3>أرز بسمتي فاخر</h3>
+                            <p class="product-desc">أرز بسمتي هندي عطري - 10 كجم</p>
+                            <div class="product-price">8900<small>ريال</small></div>
+                            <button class="product-order-btn" onclick="orderProduct('أرز بسمتي فاخر')">
+                                <i class="fas fa-shopping-cart"></i> اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المنتج 2 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- <i class="fas fa-oil-can"></i> -->
+                        </div>
+                        <div class="product-details">
+                            <h3>زيت زيتون بكر</h3>
+                            <p class="product-desc">زيت زيتون بكر ممتاز - 2 لتر</p>
+                            <div class="product-price">3000 <small>ريال</small></div>
+                            <button class="product-order-btn" onclick="orderProduct('زيت زيتون بكر')">
+                                <i class="fas fa-shopping-cart"></i> اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المنتج 3 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- <i class="fas fa-milk"></i> -->
+                        </div>
+                        <div class="product-details">
+                            <h3>حليب طازج</h3>
+                            <p class="product-desc">حليب طازج كامل الدسم - 1 لتر</p>
+                            <div class="product-price">500 <small>ريال</small></div>
+                            <button class="product-order-btn" onclick="orderProduct('حليب طازج')">
+                                <i class="fas fa-shopping-cart"></i> اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المنتج 4 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- <i class="fas fa-bread-slice"></i> -->
+                        </div>
+                        <div class="product-details">
+                            <h3>خبز أسمر</h3>
+                            <p class="product-desc">خبز أسمر طازج غني بالألياف</p>
+                            <div class="product-price">250 <small>ريال</small></div>
+                            <button class="product-order-btn" onclick="orderProduct('خبز أسمر')">
+                                <i class="fas fa-shopping-cart"></i> اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المنتج 5 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- <i class="fas fa-honey-pot"></i> -->
+                        </div>
+                        <div class="product-details">
+                            <h3>عسل طبيعي</h3>
+                            <p class="product-desc">عسل نحل طبيعي 100% - 500 جم</p>
+                            <div class="product-price">2400 <small>ريال</small></div>
+                            <button class="product-order-btn" onclick="orderProduct('عسل طبيعي')">
+                                <i class="fas fa-shopping-cart"></i> اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- المنتج 6 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <!-- <i class="fas fa-coffee"></i> -->
+                        </div>
+                        <div class="product-details">
+                            <h3>قهوة عربية</h3>
+                            <p class="product-desc">قهوة عربية فاخرة مع الهيل - 500 جم</p>
+                            <div class="product-price">800 <small>ريال</small></div>
+                            <button class="product-order-btn" onclick="orderProduct('قهوة عربية')">
+                                <i class="fas fa-shopping-cart"></i> اطلب الآن
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أزرار التنقل -->
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            
+            <!-- نقاط المؤشر -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
     <section class="baskets-section">
         <div class="container">
             <h2 class="section-title">اختر سلة غذائك المثالية</h2>
@@ -284,5 +415,57 @@ function showNotification(message, type = 'success') {
     }, 2000);
 }
  </script>
+
+<!-- إضافة Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+// تهيئة Swiper
+const swiper = new Swiper('.products-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        // عندما تكون الشاشة 640px فأكثر
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        // عندما تكون الشاشة 768px فأكثر
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        // عندما تكون الشاشة 1024px فأكثر
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    }
+});
+
+// دالة طلب المنتج
+function orderProduct(productName) {
+    const modal = document.getElementById('directModal');
+    const textarea = document.getElementById('directOrderDetails');
+    if (textarea) {
+        textarea.value = `طلب منتج: ${productName}\n\n`;
+    }
+    if (modal) modal.style.display = 'flex';
+}
+</script>
+
 </body>
 </html>
