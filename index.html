@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تمونيات سامي - المواد الغذائية</title>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <!-- إضافة Swiper CSS -->
+<!-- الخيار 2: استخدام jsDelivr (أسرع وأكثر استقراراً) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
@@ -17,211 +19,108 @@
             <div class="slogan">أفضل المواد الغذائية بجودة عالية وأسعار منافسة</div>
         </div>
     </header>
-<!-- قسم المحافظ الإلكترونية - صورة ورقم فقط -->
-<section class="digital-wallets-compact">
-    <div class="container">
-        <div class="wallets-title">
-            <i class="fas fa-wallet"></i>
-            <span>محافظ الدفع الإلكتروني</span>
-        </div>
-        <div class="wallets-grid-compact">
-            <!-- محفظة جيب Jib -->
-            <div class="wallet-card" onclick="copyWalletNumber('jibNumber', 'جيب')">
-                <div class="wallet-logo">
-                    <img src="images/jaib.png" alt="Jib">
-                </div>
-                <div class="wallet-number" id="jibNumber">525 359</div>
-            </div>
-            
-            <!-- محفظة جوالي Jawaly -->
-            <div class="wallet-card" onclick="copyWalletNumber('jawalyNumber', 'جوالي')">
-                <div class="wallet-logo">
-                    <img src="images/jawali.png" alt="Jawaly">
-                </div>
-                <div class="wallet-number" id="jawalyNumber">129 030</div>
-            </div>
-            <!-- محفظة فلوسك floosqk  -->
-            <div class="wallet-card" onclick="copyWalletNumber('floosqkNumber', 'فلوسك')">
-                <div class="wallet-logo">
-                    <img src="images/floosqk.jfif" alt="floosqk">
-                </div>
-                <div class="wallet-number" id="floosqkNumber">842 622</div>
-            </div>
-            <!-- محفظة كريمي Jawaly -->
-            <div class="wallet-card" onclick="copyWalletNumber('hassebNumber', 'كريمي')">
-                <div class="wallet-logo">
-                    <img src="images/hasseb.png" alt="hasseb">
-                </div>
-                <div class="wallet-number" id="hassebNumber">1456 408</div>
-            </div>
-            <!-- محفظة سبا كاش Jawaly -->
-            <div class="wallet-card" onclick="copyWalletNumber('sabacashNumber', 'سبا كاش')">
-                <div class="wallet-logo">
-                    <img src="images/sabacash.png" alt="sabacash">
-                </div>
-                <div class="wallet-number" id="sabacashNumber">603 409</div>
-            </div>
-            
-            <!-- محفظة موبايل موني Mobile Money -->
-            <div class="wallet-card" onclick="copyWalletNumber('mobileNumber', 'موبايل موني')">
-                <div class="wallet-logo">
-                    <img src="images/mobile_money.png" alt="Mobile Money">
-                </div>
-                <div class="wallet-number" id="mobileNumber">943 328</div>
-            </div>
-                        <!-- محفظة ايزي Mobile Money -->
-            <div class="wallet-card" onclick="copyWalletNumber('easyeNumber', 'ايزي')">
-                <div class="wallet-logo">
-                    <img src="images/easy.png" alt="easy">
-                </div>
-                <div class="wallet-number" id="easyeNumber">5000 606</div>
-            </div>
-                        <!-- محفظة يمن والت Mobile Money -->
-            <div class="wallet-card" onclick="copyWalletNumber('yemen_walletNumber', 'يمن والت')">
-                <div class="wallet-logo">
-                    <img src="images/yemen_wallet.png" alt="yemen_wallet">
-                </div>
-                <div class="wallet-number" id="yemen_walletNumber">777 279 137</div>
-            </div>
-                                    <!-- محفظة ون كاش Mobile Money -->
-            <div class="wallet-card" onclick="copyWalletNumber('one_cashNumber', 'ون كاش')">
-                <div class="wallet-logo">
-                    <img src="images/one_cash.png" alt="one_cash">
-                </div>
-                <div class="wallet-number" id="one_cashNumber">195 915</div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- ======= قسم جديد منتجاتنا ======= -->
-<section class="new-products-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="products-title">
-                <i class="fas fa-star"></i>
-                جديد منتجاتنا
-                <i class="fas fa-star"></i>
-            </h2>
-            <p class="products-subtitle">أحدث المنتجات الغذائية بجودة عالية</p>
-        </div>
-
-        <!-- Swiper -->
-        <div class="swiper products-swiper">
-            <div class="swiper-wrapper">
-                <!-- المنتج 1 -->
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <!-- <i class="fas fa-utensils"></i> -->
-                        </div>
-                        <div class="product-details">
-                            <h3>أرز بسمتي فاخر</h3>
-                            <p class="product-desc">أرز بسمتي هندي عطري - 10 كجم</p>
-                            <div class="product-price">8900<small>ريال</small></div>
-                            <button class="product-order-btn" onclick="orderProduct('أرز بسمتي فاخر')">
-                                <i class="fas fa-shopping-cart"></i> اطلب الآن
-                            </button>
-                        </div>
+    <!-- قسم المحافظ الإلكترونية -->
+    <section class="digital-wallets-compact">
+        <div class="container">
+            <div class="wallets-title">
+                <i class="fas fa-wallet"></i>
+                <span>محافظ الدفع الإلكتروني</span>
+            </div>
+            <div class="wallets-grid-compact">
+                <div class="wallet-card" onclick="copyWalletNumber('jibNumber', 'جيب')">
+                    <div class="wallet-logo">
+                        <img src="images/jaib.png" alt="Jib">
                     </div>
+                    <div class="wallet-number" id="jibNumber">525 359</div>
                 </div>
-                
-                <!-- المنتج 2 -->
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <!-- <i class="fas fa-oil-can"></i> -->
-                        </div>
-                        <div class="product-details">
-                            <h3>زيت زيتون بكر</h3>
-                            <p class="product-desc">زيت زيتون بكر ممتاز - 2 لتر</p>
-                            <div class="product-price">3000 <small>ريال</small></div>
-                            <button class="product-order-btn" onclick="orderProduct('زيت زيتون بكر')">
-                                <i class="fas fa-shopping-cart"></i> اطلب الآن
-                            </button>
-                        </div>
+                <div class="wallet-card" onclick="copyWalletNumber('jawalyNumber', 'جوالي')">
+                    <div class="wallet-logo">
+                        <img src="images/jawali.png" alt="Jawaly">
                     </div>
+                    <div class="wallet-number" id="jawalyNumber">129 030</div>
                 </div>
-                
-                <!-- المنتج 3 -->
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <!-- <i class="fas fa-milk"></i> -->
-                        </div>
-                        <div class="product-details">
-                            <h3>حليب طازج</h3>
-                            <p class="product-desc">حليب طازج كامل الدسم - 1 لتر</p>
-                            <div class="product-price">500 <small>ريال</small></div>
-                            <button class="product-order-btn" onclick="orderProduct('حليب طازج')">
-                                <i class="fas fa-shopping-cart"></i> اطلب الآن
-                            </button>
-                        </div>
+                <div class="wallet-card" onclick="copyWalletNumber('floosqkNumber', 'فلوسك')">
+                    <div class="wallet-logo">
+                        <img src="images/floosqk.jfif" alt="floosqk">
                     </div>
+                    <div class="wallet-number" id="floosqkNumber">842 622</div>
                 </div>
-                
-                <!-- المنتج 4 -->
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <!-- <i class="fas fa-bread-slice"></i> -->
-                        </div>
-                        <div class="product-details">
-                            <h3>خبز أسمر</h3>
-                            <p class="product-desc">خبز أسمر طازج غني بالألياف</p>
-                            <div class="product-price">250 <small>ريال</small></div>
-                            <button class="product-order-btn" onclick="orderProduct('خبز أسمر')">
-                                <i class="fas fa-shopping-cart"></i> اطلب الآن
-                            </button>
-                        </div>
+                <div class="wallet-card" onclick="copyWalletNumber('hassebNumber', 'كريمي')">
+                    <div class="wallet-logo">
+                        <img src="images/hasseb.png" alt="hasseb">
                     </div>
+                    <div class="wallet-number" id="hassebNumber">1456 408</div>
                 </div>
-                
-                <!-- المنتج 5 -->
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <!-- <i class="fas fa-honey-pot"></i> -->
-                        </div>
-                        <div class="product-details">
-                            <h3>عسل طبيعي</h3>
-                            <p class="product-desc">عسل نحل طبيعي 100% - 500 جم</p>
-                            <div class="product-price">2400 <small>ريال</small></div>
-                            <button class="product-order-btn" onclick="orderProduct('عسل طبيعي')">
-                                <i class="fas fa-shopping-cart"></i> اطلب الآن
-                            </button>
-                        </div>
+                <div class="wallet-card" onclick="copyWalletNumber('sabacashNumber', 'سبا كاش')">
+                    <div class="wallet-logo">
+                        <img src="images/sabacash.png" alt="sabacash">
                     </div>
+                    <div class="wallet-number" id="sabacashNumber">603 409</div>
                 </div>
-                
-                <!-- المنتج 6 -->
-                <div class="swiper-slide">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <!-- <i class="fas fa-coffee"></i> -->
-                        </div>
-                        <div class="product-details">
-                            <h3>قهوة عربية</h3>
-                            <p class="product-desc">قهوة عربية فاخرة مع الهيل - 500 جم</p>
-                            <div class="product-price">800 <small>ريال</small></div>
-                            <button class="product-order-btn" onclick="orderProduct('قهوة عربية')">
-                                <i class="fas fa-shopping-cart"></i> اطلب الآن
-                            </button>
-                        </div>
+                <div class="wallet-card" onclick="copyWalletNumber('mobileNumber', 'موبايل موني')">
+                    <div class="wallet-logo">
+                        <img src="images/mobile_money.png" alt="Mobile Money">
                     </div>
+                    <div class="wallet-number" id="mobileNumber">943 328</div>
+                </div>
+                <div class="wallet-card" onclick="copyWalletNumber('easyeNumber', 'ايزي')">
+                    <div class="wallet-logo">
+                        <img src="images/easy.png" alt="easy">
+                    </div>
+                    <div class="wallet-number" id="easyeNumber">5000 606</div>
+                </div>
+                <div class="wallet-card" onclick="copyWalletNumber('yemen_walletNumber', 'يمن والت')">
+                    <div class="wallet-logo">
+                        <img src="images/yemen_wallet.png" alt="yemen_wallet">
+                    </div>
+                    <div class="wallet-number" id="yemen_walletNumber">777 279 137</div>
+                </div>
+                <div class="wallet-card" onclick="copyWalletNumber('one_cashNumber', 'ون كاش')">
+                    <div class="wallet-logo">
+                        <img src="images/one_cash.png" alt="one_cash">
+                    </div>
+                    <div class="wallet-number" id="one_cashNumber">195 915</div>
                 </div>
             </div>
-            
-            <!-- أزرار التنقل -->
-            <!-- <div class="swiper-button-next"></div> -->
-            <!-- <div class="swiper-button-prev"></div> -->
-            
-            <!-- نقاط المؤشر -->
-            <div class="swiper-pagination"></div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <!-- قسم منتجاتنا - يُعبأ من Firebase -->
+    <section class="new-products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="products-title">
+                    <i class="fas fa-star"></i>
+                    جديد منتجاتنا
+                    <i class="fas fa-star"></i>
+                </h2>
+                <p class="products-subtitle">أحدث المنتجات الغذائية بجودة عالية</p>
+            </div>
+            <div class="swiper products-swiper">
+                <div class="swiper-wrapper" id="productsWrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </div>
+                            <div class="product-details">
+                                <h3>جاري التحميل...</h3>
+                                <p class="product-desc">يرجى الانتظار</p>
+                                <div class="product-price">0 <small>دينار</small></div>
+                                <button class="product-order-btn" disabled>
+                                    <i class="fas fa-shopping-cart"></i> اطلب الآن
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم السلات -->
     <section class="baskets-section">
         <div class="container">
             <h2 class="section-title">اختر سلة غذائك المثالية</h2>
@@ -231,6 +130,7 @@
         </div>
     </section>
 
+    <!-- زر الطلب المباشر العائم -->
     <button class="float-red-btn" id="directOrderBtn">
         <i class="fas fa-bolt"></i> طلب مباشر
     </button>
@@ -243,7 +143,6 @@
                     <h3><i class="fas fa-store"></i> تمونيات سامي</h3>
                     <p><i class="fas fa-map-marker-alt"></i> سوق القديمي بجوار مسجد الحسن</p>
                     <p><i class="fas fa-phone-alt"></i> 777279137</p>
-                    <!-- <p><i class="far fa-clock"></i> السبت - الخميس: 8 ص - 11 م</p> -->
                 </div>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -252,36 +151,53 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-  <div class="copyright">
-            © 2025 تمونيات سامي. جميع الحقوق محفوظة.
-            <br>
-            <!-- 👇 أضف هذا السطر 👇 -->
-            <span class="developer-credit" onclick="sendEmail()">برمجة وتصميم EsmaelAseed</span>
-        </div>        </div>
+            <div class="copyright">
+                © 2025 تمونيات سامي. جميع الحقوق محفوظة.
+                <br>
+                <span class="developer-credit" onclick="sendEmail()">برمجة وتصميم EsmaelAseed</span>
+            </div>
+        </div>
     </footer>
 
-
     <!-- نافذة طلب السلة -->
-    <div id="basketModal" class="modal">
-        <div class="modal-content">
-            <i class="fas fa-shopping-basket" style="font-size: 2.5rem; color: #2b7a3e;"></i>
-            <h3>طلب سلة</h3>
-            <p id="basketNameDisplay" style="font-weight: bold; margin: 10px 0;"></p>
-            <div style="display: flex; gap: 12px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
-                <button id="basketWhatsappBtn" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> واتساب</button>
-                <button id="basketSmsBtn" class="sms-btn"><i class="fas fa-sms"></i> SMS</button>
+<div id="basketModal" class="modal">
+    <div class="modal-content basket-modal-content">
+        <i class="fas fa-shopping-basket modal-icon"></i>
+        <h3>تأكيد طلب السلة</h3>
+         <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i> تأكد أن قيمة السلة 5000 فأكثر لتوصيل السلة الى منزلك مجاناً
             </div>
-            <button class="close-modal">إغلاق</button>
+        <!-- تفاصيل السلة -->
+        <div class="basket-details-box">
+            <div class="basket-detail-row">
+                <span class="detail-label"><i class="fas fa-tag"></i> اسم السلة:</span>
+                <span id="basketNameDisplay" class="detail-value"></span>
+            </div>
+            <div class="basket-detail-row">
+                <span class="detail-label"><i class="fas fa-align-left"></i> الوصف:</span>
+                <span id="basketDescDisplay" class="detail-value"></span>
+            </div>
+            <div class="basket-detail-row price-row">
+                <span class="detail-label"><i class="fas fa-money-bill-wave"></i> السعر:</span>
+                <span id="basketPriceDisplay" class="detail-value price-highlight"></span>
+            </div>
         </div>
+        
+         
+        <div class="modal-buttons">
+            <button id="basketWhatsappBtn" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> واتساب</button>
+            <button id="basketSmsBtn" class="sms-btn"><i class="fas fa-sms"></i> SMS</button>
+        </div>
+        <button class="close-modal">إغلاق</button>
     </div>
-
+</div>
     <!-- نافذة طلب مباشر -->
     <div id="directModal" class="modal">
         <div class="modal-content">
             <i class="fas fa-bolt" style="font-size: 2.5rem; color: #e63946;"></i>
             <h3 style="color: #e63946;">طلب مباشر</h3>
             <div class="warning-box">
-                <i class="fas fa-exclamation-triangle"></i> تأكد أن قيمة الطلب 3000 فأكثر لتوصيل الطلب
+                <i class="fas fa-exclamation-triangle"></i> تأكد أن قيمة الطلب 5000 فأكثر لتوصيل الطلب الى منزلك مجاناً
             </div>
             <textarea id="directOrderDetails" rows="4" placeholder="اكتب تفاصيل طلبك: المواد، الكمية، العنوان، رقم الهاتف..."></textarea>
             <div style="display: flex; gap: 12px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
@@ -291,181 +207,9 @@
             <button class="close-modal">إغلاق</button>
         </div>
     </div>
-    <!-- زر مدير مخفي (يظهر بالضغط على الفوتر 5 مرات مع طلب كلمة مرور) -->
-        <script>
-            let footerClickCount = 0;
-            let clickTimer;
-            
-            // كلمة المرور (يمكنك تغييرها)
-            const ADMIN_PASSWORD = "242S";
-            
-            function checkAdminAccess() {
-                footerClickCount++;
-                
-                // إلغاء المؤقت السابق
-                clearTimeout(clickTimer);
-                
-                // إعادة تعيين العداد بعد ثانيتين إذا لم يصل إلى 5
-                clickTimer = setTimeout(() => {
-                    footerClickCount = 0;
-                }, 2000);
-                
-                // إذا وصل العداد إلى 5
-                if (footerClickCount === 5) {
-                    // طلب كلمة المرور
-                    const password = prompt('🔐 أدخل كلمة المرور للدخول إلى لوحة التحكم:');
-                    
-                    if (password === ADMIN_PASSWORD) {
-                        window.location.href = 'admin.html';
-                    } else if (password !== null) {
-                        alert('❌ كلمة المرور غير صحيحة');
-                    }
-                    
-                    // إعادة تعيين العداد بعد المحاولة
-                    footerClickCount = 0;
-                    clearTimeout(clickTimer);
-                }
-            }
-            
-            // إضافة الحدث إلى الفوتر
-            document.addEventListener('DOMContentLoaded', () => {
-                const footer = document.querySelector('.footer');
-                if (footer) {
-                    footer.style.cursor = 'pointer';
-                    footer.addEventListener('click', checkAdminAccess);
-                    
-                    //  footer.title = 'انقر 5 مرات للدخول إلى لوحة الإدارة';
-                }
-            });
-        </script>
-        <script>
-    function sendEmail() {
-         const email = "esmaelasid@gmail.com";
-        const subject = "اتصال من موقع تمونيات سامي";
-        const body = "مرحباً EsmaelAseed،%0A%0Aأود التواصل معك بخصوص الموقع.%0A%0Aالرجاء الرد علي في أقرب وقت.%0A%0Aشكراً لك.";
-        
-        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
-    }
-</script>
-             <script type="module" src="js/main.js"></script>
-<!-- kihdm -->
- <script>
 
-   // دالة نسخ رقم المحفظة
-function copyWalletNumber(elementId, walletName) {
-    // الحصول على الرقم من العنصر
-    const numberElement = document.getElementById(elementId);
-    let number = numberElement.innerText;
-    
-    // إزالة جميع المسافات والفواصل والشرطات
-    number = number.replace(/[\s,\-]/g, '');
-    
-    // نسخ الرقم النظيف إلى الحافظة
-    navigator.clipboard.writeText(number).then(() => {
-        // تأثير وميض على البطاقة
-        const card = numberElement.closest('.wallet-card');
-        card.style.backgroundColor = '#d4edda';
-        card.style.transition = '0.2s';
-        setTimeout(() => {
-            card.style.backgroundColor = '';
-        }, 200);
-        
-        // إظهار إشعار مع الرقم المنظف
-        showNotification(`تم نسخ رقم ${walletName}: ${number}`, 'success');
-    }).catch(() => {
-        showNotification(`❌ فشل النسخ، حاول مرة أخرى`, 'error');
-    });
-}
-// إظهار إشعار منبثق
-function showNotification(message, type = 'success') {
-    // إزالة أي إشعار موجود
-    const oldNotification = document.querySelector('.copy-notification');
-    if (oldNotification) oldNotification.remove();
-    
-    const notification = document.createElement('div');
-    notification.className = 'copy-notification';
-    notification.innerHTML = `
-        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
-        <span>${message}</span>
-    `;
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: ${type === 'success' ? '#2b7a3e' : '#e63946'};
-        color: white;
-        padding: 10px 20px;
-        border-radius: 30px;
-        font-size: 0.85rem;
-        z-index: 10000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-family: 'Cairo', sans-serif;
-        white-space: nowrap;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.style.animation = 'fadeOutDown 0.3s ease';
-        setTimeout(() => notification.remove(), 300);
-    }, 2000);
-}
- </script>
-
-<!-- إضافة Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-// تهيئة Swiper
-const swiper = new Swiper('.products-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        // عندما تكون الشاشة 640px فأكثر
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        // عندما تكون الشاشة 768px فأكثر
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        // عندما تكون الشاشة 1024px فأكثر
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-    }
-});
-
-// دالة طلب المنتج
-function orderProduct(productName) {
-    const modal = document.getElementById('directModal');
-    const textarea = document.getElementById('directOrderDetails');
-    if (textarea) {
-        textarea.value = `طلب منتج: ${productName}\n\n`;
-    }
-    if (modal) modal.style.display = 'flex';
-}
-</script>
-
+    <!-- السكريبتات -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
