@@ -87,14 +87,14 @@ async function updateBasket(id) {
     const newDesc = document.getElementById(`basket_desc_${id}`).value;
     const newPrice = parseFloat(document.getElementById(`basket_price_${id}`).value);
     if (!newName || isNaN(newPrice)) { alert('الرجاء إدخال اسم وسعر صحيح'); return; }
-    await updateDoc(doc(db, "baskets", id), { name: newName, desc: newDesc, price: newPrice });
+    await updateDoc(doc(db, "products", id), { name: newName, desc: newDesc, price: newPrice });
     showMessage('basketsMsg', '✓ تم تحديث السلة');
     loadBaskets();
 }
 
 async function deleteBasket(id) {
     if (confirm('هل أنت متأكد من حذف هذه السلة؟')) {
-        await deleteDoc(doc(db, "baskets", id));
+        await deleteDoc(doc(db, "products", id));
         showMessage('basketsMsg', '✓ تم حذف السلة');
         loadBaskets();
     }
@@ -105,7 +105,7 @@ async function addBasket() {
     const price = parseFloat(document.getElementById('newBasketPrice').value);
     const desc = document.getElementById('newBasketDesc').value;
     if (!name || isNaN(price)) { alert('الرجاء إدخال اسم وسعر'); return; }
-    await addDoc(collection(db, "baskets"), { name, desc, price });
+    await addDoc(collection(db, "products"), { name, desc, price });
     document.getElementById('newBasketName').value = '';
     document.getElementById('newBasketPrice').value = '';
     document.getElementById('newBasketDesc').value = '';

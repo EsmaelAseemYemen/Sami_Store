@@ -896,13 +896,14 @@ textarea:focus {
     }
 
     .wallet-card {
-        padding: 6px 2px 4px;
+        padding: 0;
         border-radius: 10px;
     }
 
     .wallet-logo {
-        width: 34px;
-        height: 34px;
+        /* width: px; */
+        /* height: 34px; */
+        padding: 0px;
     }
 
     .wallet-number {
