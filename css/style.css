@@ -152,7 +152,7 @@ body {
     padding: 6px 4px;
     border-radius: 8px;
     direction: ltr;
-    font-family: 'Courier New', monospace;
+    /* font-family: 'Courier New', monospace; */
     letter-spacing: 0.5px;
     transition: background 0.2s ease;
 }
